@@ -11,7 +11,7 @@ User said: "${input}"
 2. Suggest one action that might help them feel better.
 `;
 
-  const apiKey = "YOUR_OPENAI_API_KEY"; // Replace this securely in real apps!
+  const apiKey = ""; // Replace this securely in real apps!
 
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
