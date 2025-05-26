@@ -5,13 +5,14 @@ async function analyzeMood() {
   responseArea.innerHTML = "Thinking...";
 
   try {
-    const res = await fetch("https://ai-mood-journal.vercel.app/api/mood", {
+    const res = await fetch("/api/mood", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
   },
   body: JSON.stringify({ moodText: input })
 });
+
 
     const data = await res.json();
     const message = data.reply || "Sorry, I couldn't understand that.";
