@@ -5,7 +5,7 @@ async function analyzeMood() {
   responseArea.innerHTML = "Thinking...";
 
   try {
-    const res = await fetch("https://your-vercel-project-name.vercel.app/api/mood", {
+    const res = await fetch("https://ai-mood-journal-ch1.vercel.app", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
