@@ -32,7 +32,10 @@ You are a helpful AI mood coach. User said: "${moodText}"
     });
 
     const data = await openaiRes.json();
-    const reply = data.choices?.[0]?.message?.content;
+    console.log("OpenAI raw response:", JSON.stringify(data, null, 2));
+
+const reply = data?.choices?.[0]?.message?.content;
+
     res.status(200).json({ reply });
   } catch (err) {
     console.error(err);
